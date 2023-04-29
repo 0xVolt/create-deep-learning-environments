@@ -1,0 +1,5 @@
+# Add Jupyter checkpoints
+/.ipynb_checkpoints
+
+# Add ./assets/
+assets/
