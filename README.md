@@ -1,7 +1,7 @@
 # Getting started with Jupyter Lab for Deep Learning
 
 ## Steps
-These are the steps to initialise a virtual environment for every deep learning project. They're as follows:
+These are the steps to initialise a virtual environment for any deep learning project in Jupyter Lab. They're as follows:
 1. Set the `conda` environment to `base` so you can launch Jupyter Lab
 
 2. `cd` into the directory you're working in
