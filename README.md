@@ -7,9 +7,9 @@ Before you continue on, it's important to note that this tutorial was intended f
   - [1.2. Steps](#12-steps)
     - [1.2.1. Setting up the Virtual Environment](#121-setting-up-the-virtual-environment)
     - [1.2.2. Linking the Virtual Environment to a Jupyter Kernel](#122-linking-the-virtual-environment-to-a-jupyter-kernel)
-          - [1.2.2.0.0.1. *Note: You can list out all the libraries installed with the command:*](#122001-note-you-can-list-out-all-the-libraries-installed-with-the-command)
-          - [1.2.2.0.0.2. *Note: You can list out all the jupyter kernels you've got with:*](#122002-note-you-can-list-out-all-the-jupyter-kernels-youve-got-with)
-          - [1.2.2.0.0.3. Also, you can uninstall a kernel with:](#122003-also-you-can-uninstall-a-kernel-with)
+          - [*Note: You can list out all the libraries installed with the command:*](#note-you-can-list-out-all-the-libraries-installed-with-the-command)
+          - [*Note: You can list out all the jupyter kernels you've got with:*](#note-you-can-list-out-all-the-jupyter-kernels-youve-got-with)
+          - [Also, you can uninstall a kernel with:](#also-you-can-uninstall-a-kernel-with)
     - [1.2.3. Installing the Required Libraries](#123-installing-the-required-libraries)
 
 
@@ -41,7 +41,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
    ```shell
    pip install ipykernel
    ```
-   ###### 1.2.2.0.0.1. *Note: You can list out all the libraries installed with the command:*
+   ###### *Note: You can list out all the libraries installed with the command:*
    ```shell
    pip list
    ```
@@ -56,7 +56,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
     Installed kernelspec ImageClassification in /home/usr/.local/share/jupyter/kernels/<name_of_venv>
    ```
 
-   ###### 1.2.2.0.0.2. *Note: You can list out all the jupyter kernels you've got with:*
+   ###### *Note: You can list out all the jupyter kernels you've got with:*
    ```shell
    jupyter kernelspec list
    ```
@@ -68,7 +68,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
         <name_of_venv>         /home/usr/.local/share/jupyter/kernels/<name_of_venv>
    ```
 
-   ###### 1.2.2.0.0.3. Also, you can uninstall a kernel with:
+   ###### Also, you can uninstall a kernel with:
    ```shell
     jupyter kernelspec uninstall <name_of_venv>
    ```
