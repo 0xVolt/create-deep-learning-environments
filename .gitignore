@@ -6,3 +6,6 @@ assets/
 
 # Add Python virtual environment
 ImageClassification/
+
+# Add VSCode workspace config settings
+.vscode/
