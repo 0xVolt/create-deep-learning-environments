@@ -11,6 +11,7 @@ Before you continue on, it's important to note that this tutorial was intended f
           - [*Note: You can list out all the jupyter kernels you've got with:*](#note-you-can-list-out-all-the-jupyter-kernels-youve-got-with)
           - [Also, you can uninstall a kernel with:](#also-you-can-uninstall-a-kernel-with)
     - [1.2.3. Installing the Required Libraries](#123-installing-the-required-libraries)
+          - [Note: You may also need to upgrade pip itself. You do so with:](#note-you-may-also-need-to-upgrade-pip-itself-you-do-so-with)
 
 
 ## 1.2. Steps
@@ -23,17 +24,17 @@ These are the steps to initialise a virtual environment for any deep learning pr
 
 3. **Create a Python `venv`** with the command:
    ```shell
-    python3 -m venv <name_of_venv>
+   python3 -m venv <name_of_venv>
    ```
 
 4. **Activate the `venv`** with the command:
    ```shell
-    source <name_of_venv>/bin/activate
+   source <name_of_venv>/bin/activate
    ```
 
    You can deactivate the `venv` when you're done with the project with:
    ```shell
-    deactivate
+   deactivate
    ```
 
 ### 1.2.2. Linking the Virtual Environment to a Jupyter Kernel
@@ -53,7 +54,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
 
    The command-line should output,
    ```shell
-    Installed kernelspec ImageClassification in /home/usr/.local/share/jupyter/kernels/<name_of_venv>
+   Installed kernelspec ImageClassification in /home/usr/.local/share/jupyter/kernels/<name_of_venv>
    ```
 
    ###### *Note: You can list out all the jupyter kernels you've got with:*
@@ -63,20 +64,33 @@ These are the steps to initialise a virtual environment for any deep learning pr
 
    This is now what should come up if this is the first kernel you create:
    ```shell
-    Available kernels:
-        python3                /home/usr/anaconda3/share/jupyter/kernels/python3
-        <name_of_venv>         /home/usr/.local/share/jupyter/kernels/<name_of_venv>
+   Available kernels:
+      python3                /home/usr/anaconda3/share/jupyter/kernels/python3
+      <name_of_venv>         /home/usr/.local/share/jupyter/kernels/<name_of_venv>
    ```
 
    ###### Also, you can uninstall a kernel with:
    ```shell
-    jupyter kernelspec uninstall <name_of_venv>
+   jupyter kernelspec uninstall <name_of_venv>
    ```
 
 ### 1.2.3. Installing the Required Libraries
-7. Install `tensorflow` and `tensorflow-gpu` into your kernel by running this in a notebook cell:
+1. Install `tensorflow` into your kernel by running this in a notebook cell:
    ```py
-   !pip install tensorflow tensorflow-gpu
+   !pip install tensorflow
    ```
 
-8. 
+   Be wary of an error with Google's Python dependencies within tensorflow. They can be solved using this block of code to update pip's installs of Google's libraries.
+   ```shell
+   pip uninstall protobuf
+   pip uninstall google
+   pip install google 
+   pip install --upgrade protobuf
+   ```
+
+   ###### Note: You may also need to upgrade pip itself. You do so with:
+   ```shell
+   pip install --upgrade pip
+   ```
+
+2. 
