@@ -75,7 +75,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
    ```
 
 ### 1.2.3. Installing the Required Libraries
-1. Install `tensorflow` into your kernel by running this in a notebook cell:
+7. Install `tensorflow` into your kernel by running this in a notebook cell:
    ```py
    !pip install tensorflow
    ```
@@ -93,4 +93,4 @@ These are the steps to initialise a virtual environment for any deep learning pr
    pip install --upgrade pip
    ```
 
-2. 
+8. 
