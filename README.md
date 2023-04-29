@@ -1,4 +1,4 @@
-# Getting started with Jupyter Lab for Deep Learning
+# Setup Jupyter Lab for Deep Learning
 
 ## Steps
 These are the steps to initialise a virtual environment for any deep learning project in Jupyter Lab. They're as follows:
