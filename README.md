@@ -97,4 +97,12 @@ The `tensorflow` and Google `protobuf` libraries have compatibility issues so co
 
 > It's important to install the correct versions to avoid compatibility issues and ensure optimal performance.
 
-8. 
+8. Check the version of the deep learning framework you're using. Either using, `pip list` and finding the framework that way or by simply running `pip show <framework_name>`. 
+
+   If you're using `tensorflow`, [here's](https://www.tensorflow.org/install/source#tested_build_configurations) where you can find the appropriate build configuration for `CUDA` and `cudNN` for your version of `tensorflow`.
+
+   Use [this](https://github.com/pytorch/pytorch#from-source) if you're running a Pytorch project.
+
+9. Download the NVIDIA CUDA Toolkit from [here](https://developer.nvidia.com/cuda-toolkit). This may take a while since it's a 4 GB install.
+
+10. 
