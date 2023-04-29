@@ -28,7 +28,7 @@ These are the steps to initialise a virtual environment for every deep learning 
    ```
    ###### *Note: You can list out all the libraries installed with the command:*
    ```shell
-   pip list 
+   pip list
    ```
 
 6. Link the kernel with the Jupyter Lab runtime using:
@@ -36,10 +36,10 @@ These are the steps to initialise a virtual environment for every deep learning 
    python3 -m ipykernel install --user --name=<name_of_venv>
    ```
 
-   When the command-line outputs, 
+   When the command-line outputs,
    ```shell
     Installed kernelspec ImageClassification in /home/usr/.local/share/jupyter/kernels/<name_of_venv>
    ```
-   You know you're on the right track.
+   **You know you're on the right track.**
 
-7. 
+7.
