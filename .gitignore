@@ -3,3 +3,6 @@
 
 # Add ./assets/
 assets/
+
+# Add Python virtual environment
+ImageClassification/
