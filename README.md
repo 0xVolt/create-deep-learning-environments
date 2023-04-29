@@ -11,7 +11,9 @@ Before you continue on, it's important to note that this tutorial was intended f
           - [*Note: You can list out all the jupyter kernels you've got with:*](#note-you-can-list-out-all-the-jupyter-kernels-youve-got-with)
           - [Also, you can uninstall a kernel with:](#also-you-can-uninstall-a-kernel-with)
     - [1.2.3. Installing the Required Libraries](#123-installing-the-required-libraries)
+      - [**Note: `tensorflow` and Google's `protobuf` libraries have compatibility issues so come back to this if it doesn't work**](#note-tensorflow-and-googles-protobuf-libraries-have-compatibility-issues-so-come-back-to-this-if-it-doesnt-work)
           - [Note: You may also need to upgrade pip itself. You do so with:](#note-you-may-also-need-to-upgrade-pip-itself-you-do-so-with)
+    - [Installing our GPU Drivers](#installing-our-gpu-drivers)
 
 
 ## 1.2. Steps
@@ -75,6 +77,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
    ```
 
 ### 1.2.3. Installing the Required Libraries
+#### **Note: `tensorflow` and Google's `protobuf` libraries have compatibility issues so come back to this if it doesn't work**
 7. Install `tensorflow` into your kernel by running this in a notebook cell:
    ```py
    !pip install tensorflow
@@ -92,5 +95,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
    ```shell
    pip install --upgrade pip
    ```
+
+### Installing our GPU Drivers 
 
 8. 
