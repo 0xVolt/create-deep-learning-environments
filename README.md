@@ -1,25 +1,20 @@
 # Setup Jupyter Lab for Deep Learning
 Before you continue on, it's important to note that this tutorial was intended for setting up virtual environments on a Linux system. While this process is similar on other OSs, some commands might differ so it's worth referring to the documentation at each step.  
 
-## 1.1. Table of Contents
+## Table of Contents
 - [Setup Jupyter Lab for Deep Learning](#setup-jupyter-lab-for-deep-learning)
-  - [1.1. Table of Contents](#11-table-of-contents)
-  - [1.2. Steps](#12-steps)
-    - [1.2.1. Setting up the Virtual Environment](#121-setting-up-the-virtual-environment)
-    - [1.2.2. Linking the Virtual Environment to a Jupyter Kernel](#122-linking-the-virtual-environment-to-a-jupyter-kernel)
-          - [*Note: You can list out all the libraries installed with the command:*](#note-you-can-list-out-all-the-libraries-installed-with-the-command)
-          - [*Note: You can list out all the jupyter kernels you've got with:*](#note-you-can-list-out-all-the-jupyter-kernels-youve-got-with)
-          - [Also, you can uninstall a kernel with:](#also-you-can-uninstall-a-kernel-with)
-    - [1.2.3. Installing the Required Libraries](#123-installing-the-required-libraries)
-      - [**Note: `tensorflow` and Google's `protobuf` libraries have compatibility issues so come back to this if it doesn't work**](#note-tensorflow-and-googles-protobuf-libraries-have-compatibility-issues-so-come-back-to-this-if-it-doesnt-work)
-          - [Note: You may also need to upgrade pip itself. You do so with:](#note-you-may-also-need-to-upgrade-pip-itself-you-do-so-with)
+  - [Table of Contents](#table-of-contents)
+  - [Steps](#steps)
+    - [Setting up the Virtual Environment](#setting-up-the-virtual-environment)
+    - [Linking the Virtual Environment to a Jupyter Kernel](#linking-the-virtual-environment-to-a-jupyter-kernel)
+    - [Installing the Required Libraries](#installing-the-required-libraries)
     - [Installing our GPU Drivers](#installing-our-gpu-drivers)
 
 
-## 1.2. Steps
+## Steps
 These are the steps to initialise a virtual environment for any deep learning project in Jupyter Lab. They're as follows:
 
-### 1.2.1. Setting up the Virtual Environment
+### Setting up the Virtual Environment
 1. **Set the `conda` environment to `base` so you can launch Jupyter Lab**
 
 2. **`cd` into the directory** you're working in
@@ -39,12 +34,12 @@ These are the steps to initialise a virtual environment for any deep learning pr
    deactivate
    ```
 
-### 1.2.2. Linking the Virtual Environment to a Jupyter Kernel
+### Linking the Virtual Environment to a Jupyter Kernel
 5. **Install `ipykernel`** to link our `venv` with a Jupyter kernel (which is another word for environment or runtime). This is a one-time installation. If you've got `ipykernel` installed, you don't have to again. We do this with:
    ```shell
    pip install ipykernel
    ```
-   ###### *Note: You can list out all the libraries installed with the command:*
+   *Note: You can list out all the libraries installed with the command:*
    ```shell
    pip list
    ```
@@ -59,7 +54,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
    Installed kernelspec ImageClassification in /home/usr/.local/share/jupyter/kernels/<name_of_venv>
    ```
 
-   ###### *Note: You can list out all the jupyter kernels you've got with:*
+   *Note: You can list out all the jupyter kernels you've got with:*
    ```shell
    jupyter kernelspec list
    ```
@@ -71,13 +66,14 @@ These are the steps to initialise a virtual environment for any deep learning pr
       <name_of_venv>         /home/usr/.local/share/jupyter/kernels/<name_of_venv>
    ```
 
-   ###### Also, you can uninstall a kernel with:
+   *Also, you can uninstall a kernel with:*
    ```shell
    jupyter kernelspec uninstall <name_of_venv>
    ```
 
-### 1.2.3. Installing the Required Libraries
-#### **Note: `tensorflow` and Google's `protobuf` libraries have compatibility issues so come back to this if it doesn't work**
+### Installing the Required Libraries
+The `tensorflow` and Google `protobuf` libraries have compatibility issues so come back to this if it doesn't work.
+
 7. Install `tensorflow` into your kernel by running this in a notebook cell:
    ```py
    !pip install tensorflow
@@ -91,11 +87,14 @@ These are the steps to initialise a virtual environment for any deep learning pr
    pip install --upgrade protobuf
    ```
 
-   ###### Note: You may also need to upgrade pip itself. You do so with:
+   *Note: You may also need to upgrade pip itself. You do so with:*
    ```shell
    pip install --upgrade pip
    ```
 
 ### Installing our GPU Drivers 
+**Different versions of PyTorch require specific versions of CUDA and cuDNN libraries. You can check the compatible versions in the official PyTorch documentation. For example, for PyTorch 1.10.0, the compatible CUDA version is 11.3 and the compatible cuDNN version is 8.2.1.**
+
+> It's important to install the correct versions to avoid compatibility issues and ensure optimal performance.
 
 8. 
