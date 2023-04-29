@@ -1,4 +1,5 @@
 # Setup Jupyter Lab for Deep Learning
+Before you continue on, it's important to note that this tutorial was intended for setting up virtual environments on a Linux system. While this process is similar on other OSs, some commands might differ so it's worth referring to the documentation at each step.  
 
 ## Steps
 These are the steps to initialise a virtual environment for any deep learning project in Jupyter Lab. They're as follows:
