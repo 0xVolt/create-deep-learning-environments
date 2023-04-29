@@ -22,7 +22,7 @@ These are the steps to initialise a virtual environment for every deep learning 
    ```
 
 
-5. Install `ipykernel` to link our `venv` with a Jupyter kernel (which is another word for environment or runtime). We do this with:
+5. Install `ipykernel` to link our `venv` with a Jupyter kernel (which is another word for environment or runtime). **This is a one-time installation**. We do this with:
    ```shell
    pip install ipykernel
    ```
@@ -35,5 +35,11 @@ These are the steps to initialise a virtual environment for every deep learning 
    ```shell
    python3 -m ipykernel install --user --name=<name_of_venv>
    ```
+
+   When the command-line outputs, 
+   ```shell
+    Installed kernelspec ImageClassification in /home/usr/.local/share/jupyter/kernels/<name_of_venv>
+   ```
+   You know you're on the right track.
 
 7. 
