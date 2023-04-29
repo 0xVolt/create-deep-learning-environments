@@ -49,7 +49,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
    ```shell
     Available kernels:
         python3                /home/usr/anaconda3/share/jupyter/kernels/python3
-        imageclassification    /home/usr/.local/share/jupyter/kernels/imageclassification
+        <name_of_venv>         /home/usr/.local/share/jupyter/kernels/<name_of_venv>
    ```
 
    ###### Also, you can uninstall a kernel with:
