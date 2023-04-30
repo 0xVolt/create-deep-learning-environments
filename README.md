@@ -1,5 +1,5 @@
 # Setup Jupyter Lab for Deep Learning
-Before you continue on, it's important to note that this tutorial was intended for setting up virtual environments on a Linux system. While this process is similar on other OSs, some commands might differ so it's worth referring to the documentation at each step.  
+> This tutorial was intended for setting up virtual environments on a Linux system. While this process is similar on other OSs, some commands might differ so it's worth referring to the documentation at each step.  
 
 ## Table of Contents
 - [Setup Jupyter Lab for Deep Learning](#setup-jupyter-lab-for-deep-learning)
@@ -9,22 +9,23 @@ Before you continue on, it's important to note that this tutorial was intended f
     - [Linking the Virtual Environment to a Jupyter Kernel](#linking-the-virtual-environment-to-a-jupyter-kernel)
     - [Installing the Required Libraries](#installing-the-required-libraries)
     - [Installing our GPU Drivers](#installing-our-gpu-drivers)
+    - [Checking whether the Notebook is GPU Accelerated](#checking-whether-the-notebook-is-gpu-accelerated)
 
 
 ## Steps
 These are the steps to initialise a virtual environment for any deep learning project in Jupyter Lab. They're as follows:
 
 ### Setting up the Virtual Environment
-1. **Set the `conda` environment to `base` so you can launch Jupyter Lab**
+1. Set the `conda` environment to `base` so you can launch Jupyter Lab
 
-2. **`cd` into the directory** you're working in
+2. `cd` into the directory you're working in
 
-3. **Create a Python `venv`** with the command:
+3. Create a Python `venv` with the command:
    ```shell
    python3 -m venv <name_of_venv>
    ```
 
-4. **Activate the `venv`** with the command:
+4. Activate the `venv` with the command:
    ```shell
    source <name_of_venv>/bin/activate
    ```
@@ -35,7 +36,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
    ```
 
 ### Linking the Virtual Environment to a Jupyter Kernel
-5. **Install `ipykernel`** to link our `venv` with a Jupyter kernel (which is another word for environment or runtime). This is a one-time installation. If you've got `ipykernel` installed, you don't have to again. We do this with:
+5. Install `ipykernel` to link our `venv` with a Jupyter kernel (which is another word for environment or runtime). This is a one-time installation. If you've got `ipykernel` installed, you don't have to again. We do this with:
    ```shell
    pip install ipykernel
    ```
@@ -44,7 +45,7 @@ These are the steps to initialise a virtual environment for any deep learning pr
    pip list
    ```
 
-6. **Link the kernel to Jupyter Lab's** runtime using:
+6. Link the kernel to Jupyter Lab's runtime using:
    ```shell
    python3 -m ipykernel install --user --name=<name_of_venv>
    ```
@@ -93,9 +94,7 @@ The `tensorflow` and Google `protobuf` libraries have compatibility issues so co
    ```
 
 ### Installing our GPU Drivers 
-**Different versions of PyTorch require specific versions of CUDA and cuDNN libraries. You can check the compatible versions in the official PyTorch documentation. For example, for PyTorch 1.10.0, the compatible CUDA version is 11.3 and the compatible cuDNN version is 8.2.1.**
-
-> It's important to install the correct versions to avoid compatibility issues and ensure optimal performance.
+> Different versions of PyTorch require specific versions of CUDA and cuDNN libraries. You can check the compatible versions in the official PyTorch documentation. For example, for PyTorch 1.10.0, the compatible CUDA version is 11.3 and the compatible cuDNN version is 8.2.1. It's important to install the correct versions to avoid compatibility issues and ensure optimal performance.
 
 8. Check the version of the deep learning framework you're using. Either using, `pip list` and finding the framework that way or by simply running `pip show <framework_name>`. 
 
@@ -109,5 +108,12 @@ The `tensorflow` and Google `protobuf` libraries have compatibility issues so co
    ```shell
    nvcc --version
    ```
+### Checking whether the Notebook is GPU Accelerated
+> If you've followed all of these steps, you're good to go to run your notebooks in a GPU accelerated environment! 
 
-10. 
+10. To verify whether the notebook is using your GPU, run this command in a cell:
+      ```shell
+      !nvidia-smi
+      ```
+
+---
