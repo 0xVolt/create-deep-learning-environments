@@ -93,6 +93,25 @@ The `tensorflow` and Google `protobuf` libraries have compatibility issues so co
    pip install --upgrade pip
    ```
 
+> Pro Tip: Create a `requirements.txt` file and type out all the libraries needed to install into the `venv`. Then load it using pip and install all the libraries. You do this by:
+```shell
+# Create requirements file
+touch requirements.txt
+
+# Open it using lunarvim
+lvim requirements.txt
+
+# Example requirements.txt file
+torch
+matplotlib
+sklearn
+transformers
+pandas
+
+# Load file and install packages
+pip install -r requirements.txt
+```
+
 ### Installing our GPU Drivers 
 > Different versions of PyTorch require specific versions of CUDA and cuDNN libraries. You can check the compatible versions in the official PyTorch documentation. For example, for PyTorch 1.10.0, the compatible CUDA version is 11.3 and the compatible cuDNN version is 8.2.1. It's important to install the correct versions to avoid compatibility issues and ensure optimal performance.
 
