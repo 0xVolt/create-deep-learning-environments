@@ -11,7 +11,6 @@
     - [Installing our GPU Drivers](#installing-our-gpu-drivers)
     - [Checking whether the Notebook is GPU Accelerated](#checking-whether-the-notebook-is-gpu-accelerated)
 
-
 ## Steps
 These are the steps to initialise a virtual environment for any deep learning project in Jupyter Lab. They're as follows:
 
