@@ -24,6 +24,12 @@ These are the steps to initialise a virtual environment for any deep learning pr
    python3 -m venv <name_of_venv>
    ```
 
+  or,
+  ```shell
+  conda create --name <name_of_venv>
+  ```
+  to create an environment with Anaconda. Use `conda activate <name_of_venv>` to activate the environment.
+
 4. Activate the `venv` with the command:
    ```shell
    source <name_of_venv>/bin/activate
